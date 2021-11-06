@@ -10,3 +10,24 @@ config BR2_PACKAGE_TINYMEMBENCH
 	  strategies.
 
 	  https://github.com/ssvb/tinymembench
+
+config BR2_TINYMEMBENCH_MINREPEATS
+	int "Minimum number of repeats"
+	default "3"
+	depends on BR2_PACKAGE_TINYMEMBENCH
+	help
+	  Minimum number of repeats per test
+
+config BR2_TINYMEMBENCH_MAXREPEATS
+	int "Maximum number of repeats"
+	default "20"
+	depends on BR2_PACKAGE_TINYMEMBENCH
+	help
+	  Minimum number of repeats per test
+
+config BR2_TINYMEMBENCH_LATBENCH_COUNT
+	int "Number of rounds in latency bench"
+	default "10000000"
+	depends on BR2_PACKAGE_TINYMEMBENCH
+	help
+	  Number of rounds in latency bench per block size
