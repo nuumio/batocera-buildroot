@@ -16,14 +16,28 @@ config BR2_TINYMEMBENCH_MINREPEATS
 	default "3"
 	depends on BR2_PACKAGE_TINYMEMBENCH
 	help
-	  Minimum number of repeats per test
+	  Minimum number of repeats per test in memory bandwidth tests
 
 config BR2_TINYMEMBENCH_MAXREPEATS
 	int "Maximum number of repeats"
-	default "20"
+	default "10"
 	depends on BR2_PACKAGE_TINYMEMBENCH
 	help
-	  Minimum number of repeats per test
+	  Minimum number of repeats per test in memory bandwidth tests
+
+config BR2_TINYMEMBENCH_MEM_REALLOC
+	bool "Memory realloc"
+	default n
+	depends on BR2_PACKAGE_TINYMEMBENCH
+	help
+	  Reallocate memory for each test in memory bandwidth tests
+
+config BR2_TINYMEMBENCH_LATBENCH_REPEATS
+	int "Number of repeats in latency bench"
+	default "10"
+	depends on BR2_PACKAGE_TINYMEMBENCH
+	help
+	  Number of repeats in latency bench per block size
 
 config BR2_TINYMEMBENCH_LATBENCH_COUNT
 	int "Number of rounds in latency bench"
