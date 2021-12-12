@@ -4,10 +4,19 @@
 # Start all init scripts in /etc/init.d
 # executing them in numerical order.
 #
+INIT_DEBUG=off
+[ -f /etc/init.d.conf ] && . /etc/init.d.conf
+debug=false
+case "${INIT_DEBUG}" in
+	true|TRUE|True|yes|YES|Yes|on|ON|On)
+		debug=true
+		;;
+esac
 for i in /etc/init.d/S??* ;do
 
      # Ignore dangling symlinks (if any).
      [ ! -f "$i" ] && continue
+     "${debug}" && echo "<6>rcS: ${i}" > /dev/kmsg
 
      case "$i" in
 	*.sh)
