@@ -1,5 +1,6 @@
 # Batocera Update
 # From https://www.kernel.org/pub/linux/kernel/v5.x/sha256sums.asc
+sha256  2df2b4e71b5b2f25b201ba5a3d42bdf676b1deaae2fb44c14a1d8a33c9f76a4d  linux-5.15.14.tar.xz
 sha256  0a131b6a2f9f5ee37ecb332b5459ab35a87f0bf2d4ec923988d0663646cf156a  linux-5.15.13.tar.xz
 sha256  7de919772b62647591527e904e3b3583783381a29d812404f58a222484e751a0  linux-5.15.12.tar.xz
 sha256  484fcf5df8d00ddc570af443ef33382a110b338239b1f47048974baa22455b4b  linux-5.15.10.tar.xz
